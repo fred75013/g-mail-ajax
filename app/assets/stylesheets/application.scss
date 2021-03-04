@@ -1,0 +1,32 @@
+@import "variables/personal_variables";
+@import "variables/bootstrap_variables";
+
+@import "bootstrap";
+@import "font-awesome";
+@import "components/*";
+
+body {
+  width: 100%;
+}
+.fa {
+  position: absolute;
+  right: 0;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.tableau {
+  display: flex;
+  justify-content: space-around;
+}
+.tableau1 {
+  border: 1px solid #f8f9fa;
+  border-radius: 5px;
+  height: 300px;
+  overflow: scroll;
+  width: 600px;
+  background-color: #f8f9fa;
+}

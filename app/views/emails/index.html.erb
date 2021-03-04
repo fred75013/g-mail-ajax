@@ -1,0 +1,54 @@
+
+<div class="container">
+<div class="title">
+<h1>Emails</h1>
+<%= link_to "Recevoir un email", emails_path, class: "btn btn-primary", :method => 'POST', remote: true %>
+</div>
+<div class= "tableau">
+  <div class="row ">
+    <div class="col sm-6 tableau1">
+      <table>
+        <thead>
+          <tr>
+            <th>Liste des emails</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @emails.each do |email| %>        
+            <tr>
+              <td id="deleteEmail<%=email.id%>"> 
+                <%if email.read == false%>
+                  <%= link_to email.object, email, remote: true, style:"color:red" %>
+                <% else %>
+                  <%= link_to email.object, email, remote: true, style:"color:green" %>
+                <%end%>
+              </td>
+            </tr>
+            <td id="emailObject"></td>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col sm-6">
+      <table>
+        <thead>
+          <tr>
+            <th>Email selectionné</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>   
+            <td class="contentEmail"></td>  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+

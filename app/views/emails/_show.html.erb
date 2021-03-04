@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Object:</strong>
+  <%= @email.object %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= @email.body %>
+</p>
+
+<%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %> |
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to "Marquer comme non-lu", email_path(email), :method => 'PUT', class: "btn btn-light", remote: true %>|
+
+

@@ -1,0 +1,11 @@
+
+
+
+         <%if email.read == false%>
+         
+        <%= link_to email.object, email, remote: true, style:"color:red" %>
+        <% else %>
+                <%= link_to email.object, email, remote: true, style:"color:green" %>
+        <%end%>
+
+      
